@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User and Cohort Administration</title>
+	<!-- Compiled and minified CSS -->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+</head>
+<body>
+
+	<nav class="blue accent-2">
+	    <div class="nav-wrapper">
+	        <h4 class="center">Query/Add/Update/Delete Users to existing Cohorts</h4>
+	    </div>
+  	</nav>
+ 
+	 <div class="container orange-text">
+     
+   		<!-- form for getting user inputs -->
+
+   			<form id="userForm" action="/classes/recording?_method=PUT" method="POST">
+
+		    <div class="row">
+				
+				<div class="input-field col s8 offset-s2">
+					<label for="githubUsername">Github Username</label>					
+					<input type="text" name="github_username" id="githubUsername" class="input-field" required>
+				</div>
+			</div>
+
+			 <div class="row">
+				
+				<div class="input-field col s8 offset-s2">
+					<label for="cohort">Cohort</label>					
+					<input type="text" name="cohort_name" id="cohort" class="input-field">
+				</div>
+			</div>
+
+			 <div class="row">
+				
+				<div class="input-field col s8 offset-s2">
+					<label for="role">Role</label>					
+					<input type="text" name="role" id="role" class="input-field" required>
+				</div>
+			</div>
+
+			
+			
+			<!-- Submit Button -->
+			<div class="row center">
+	      		<button id="query" class="btn waves-effect waves-light  blue accent-2" type="submit" name="action">Query</button>
+	      		<button id="add" class="btn waves-effect waves-light  blue accent-2" type="submit" name="action">Add</button>
+	      		<button id="update" class="btn waves-effect waves-light  blue accent-2" type="submit" name="action">Update</button>
+	      		<button id="delete" class="btn waves-effect waves-light  blue accent-2" type="submit" name="action">Delete</button>
+	      	</div>
+ 		</form>
+	  
+	</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+<script>
+
+</script>
+</body>
+</html>

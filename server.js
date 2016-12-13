@@ -12,6 +12,7 @@ var path = require('path');
 var loginUser = require('./login_user');
 var logger = require('morgan');
 var usersRoute = require('./routes/usersRoute.js');
+var adminRoute = require('./routes/adminRoute.js');
 var classesRoute = require('./routes/classesRoute.js');
 var models  = require('./models');
 var sequelizeConnection = models.sequelize;
@@ -137,7 +138,20 @@ app.get('/calender', ensureAuthenticated, function(req, res){
 
      res.sendFile(path.join(__dirname,'views','html','calender.html'));
 
-    }else{
+    }if(user && (user.role === 'admin')){
+
+      loginUser({
+        name: user.github_username,
+        role:user.role
+        });
+
+      console.log(loginUser());
+
+
+     res.sendFile(path.join(__dirname,'views','html','admin.html'));
+
+    }
+    else{
       res.send("Sorry. You are not a authorised user. Please contact Administrator.")
     }
 
@@ -150,7 +164,7 @@ app.get('/calender', ensureAuthenticated, function(req, res){
 
 app.use('/users',usersRoute);
 app.use('/classes',classesRoute);
-
+app.use('/admin',adminRoute);
 
 // GET /auth/github
 //   Use passport.authenticate() as route middleware to authenticate the
