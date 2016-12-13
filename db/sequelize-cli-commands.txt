@@ -1,0 +1,29 @@
+
+---------------------------------------------------
+sequelize model:create --name Class --attributes "subject:string,lesson:string,length:integer,date1:Date,date2:Date,instructor1:string,instructor2:string,recording1:string,recording2:string,cohort_name:string"
+
+
+---------------------------------------------------
+sequelize model:create --name Cohort --attributes "cohort_name:string,cohort_title:string,start_date:Date,campus:string,city:string,suppl_content_link:string,absence_link:string,slack_link:string,tutoring_link:string,feedback_link:string,hw_submission_link:string"
+
+
+------------------------------
+sequelize model:create --name User --attributes "name:string,email:string,github_username:string,cohort_name:string,role:string"
+
+create database utbootcamp;
+
+use datebase utbootcamp;
+update classes
+set instructor1='Josh';
+
+update classes
+set instructor2='Gerald';
+
+update classes
+set cohort_name='UT0725FSF';
+
+
+use utbootcamp;
+
+insert into cohorts(cohort_name,cohort_title,campus,city,suppl_content_link,feedback_link,hw_submission_link)
+values('UT0725FSF','The Coding Bootcamp at UT Austin','TR','SupplementalContent.md','http://www.bootcampspot.com/feedback/studentFeedback','http://bootcampspot.com');
