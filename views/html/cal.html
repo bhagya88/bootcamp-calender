@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<link href='https://fullcalendar.io/js/fullcalendar-3.1.0/fullcalendar.min.css' rel='stylesheet' />
+<link href='https://fullcalendar.io/js/fullcalendar-3.1.0/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+<script src='https://fullcalendar.io/js/fullcalendar-3.1.0/lib/moment.min.js'></script>
+<script src='https://fullcalendar.io/js/fullcalendar-3.1.0/lib/jquery.min.js'></script>
+<script src='https://fullcalendar.io/js/fullcalendar-3.1.0/lib/jquery-ui.min.js'></script>
+<script src='https://fullcalendar.io/js/fullcalendar-3.1.0/fullcalendar.min.js'></script>
+
+<script>
+
+   
+
+
+   $(document).ready(function() {
+
+
+       var unscheduledEvents = []; 
+       var scheduledEvents =[];
+
+
+
+        function populateUnscheduledEvents(events){
+
+                $('#external-events').append('<h4 class="center">Classes</h4>');
+                $('#external-events').append('');
+               
+                events.forEach(function(event){
+              
+
+                var $div = $('<div class="fc-event">');
+                $div.text(event.title);
+
+                $('#external-events').append($div);
+            });
+
+        }
+
+
+       var req = $.ajax({
+                          url: "/classes",
+                          method: "GET"
+                         
+                        });
+                         
+        req.done(function( data ) {
+            data.forEach(function(event){
+                if(event.date1){
+                    scheduledEvents.push({
+                                title: event.lesson+ ' ' + event.subject,
+                                start: event.date1
+                                });
+                }else{
+                    unscheduledEvents.push({
+                         
+                        title: event.lesson+ ' ' + event.subject
+                                
+                    });   
+                }
+
+            });
+
+           
+
+            
+       
+
+            ///////////////
+              populateUnscheduledEvents(unscheduledEvents);
+           
+            console.log(data);
+        });
+                      
+        req.fail(function( jqXHR, textStatus ) {
+            alert( "Request failed: " + textStatus );
+        });
+
+
+            /* initialize the external events
+        -----------------------------------------------------------------*/
+        $('#external-events').append("<p><input type='checkbox' id='drop-remove'  checked /><label for='drop-remove'>remove after drop</label></p>");
+
+        $('#external-events .fc-event').each(function() {
+
+        // store data so the calendar knows to render an event upon drop
+        $(this).data('event', {
+                title: $.trim($(this).text()), // use the element's text as the event title
+                stick: true // maintain when user navigates (see docs on the renderEvent method)
+            }); 
+
+        // make the event draggable using jQuery UI
+        $(this).draggable({
+                zIndex: 999,
+                revert: true,      // will cause the event to go back to its
+                revertDuration: 0  //  original position after the drag
+            });
+
+        });
+
+
+
+        $('#calendar').fullCalendar({
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay'
+            },
+            editable: true,
+            droppable: true, 
+
+            // this allows things to be dropped onto the calendar
+            drop: function() {
+                // is the "remove after drop" checkbox checked?
+                if ($('#drop-remove').is(':checked')) {
+                    // if so, remove the element from the "Draggable Events" list
+                    $(this).remove();
+                }
+
+
+            },  
+           // businessHours: {
+           //  start: moment().format('HH:mm'), /* Current Hour/Minute 24H format */
+           //  end: '17:00', // 5pm? set to whatever
+           //  dow: [1,2,3,4,6] // Day of week. If you don't set it, Sat/Sun are gray too
+           //  },
+           // eventConstraint:"businessHours",
+           eventReceive:function(event){
+            tobeUpdatedEvents.push({
+                lesson:event.title.split(' ')[0],
+                date1: moment(event.start, 'DD.MM.YYYY').format('YYYY-MM-DD'),
+
+
+            });
+   
+        },
+
+           // googleCalendarApiKey: 'AIzaSyDEBR2AuK6QHCWr521eDJ8ZnDT9IP28c78',
+        
+           //  // US Holidays
+           events: scheduledEvents
+
+            
+        });
+
+
+
+       
+
+        /* initialize the calendar
+        -----------------------------------------------------------------*/
+        console.log("scheduledEvents");
+        console.log(scheduledEvents);
+
+
+
+
+
+
+       
+        var tobeUpdatedEvents =[];
+
+     
+
+        $('#saveCal').on('click',function(){
+            console.log('inside save');
+            console.log(tobeUpdatedEvents);
+
+            if(tobeUpdatedEvents.length){
+            var req = $.ajax({
+                          url: "/classes/?_method=PUT",
+                          method: "POST",
+                          data: {events: tobeUpdatedEvents},
+                          dataType: "json"
+                          
+                        });
+                         
+                        req.done(function( msg ) {
+                         console.log(msg);
+                        });
+                         
+                        req.fail(function( jqXHR, textStatus ) {
+                          alert( "Request failed: " + textStatus );
+                        });
+
+            }
+
+        });
+
+     
+
+});
+
+</script>
+<style>
+
+    body {
+        margin-top: 40px;
+        text-align: center;
+        font-size: 14px;
+        font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+    }
+        
+    #wrap {
+        width: 1100px;
+        margin: 0 auto;
+    }
+        
+    #external-events {
+        float: left;
+        width: 150px;
+        padding: 0 10px;
+        border: 1px solid #ccc;
+        background: #eee;
+        text-align: left;
+    }
+        
+    #external-events h4 {
+        font-size: 16px;
+        margin-top: 0;
+        padding-top: 1em;
+    }
+        
+    #external-events .fc-event {
+        margin: 10px 0;
+        cursor: pointer;
+    }
+        
+    #external-events p #saveCal{
+        margin: 1.5em 0;
+        font-size: 11px;
+        color: #666;
+    }
+        
+    #external-events p input #saveCal {
+        margin: 0;
+        vertical-align: middle;
+    }
+
+    #calendar {
+        float: right;
+        width: 900px;
+    }
+
+</style>
+</head>
+
+<body>
+    <div id='wrap'>
+
+        <button id="saveCal">Save Calendar</button>
+        <a href="/classes/readme" target="_blank"><button id="readme">Generate Readme</button></a>
+        <div id='external-events'>
+            
+        </div>
+           
+
+        <div id='calendar'></div>
+
+        <div style='clear:both'></div>
+
+    </div>
+</body>
+</html>

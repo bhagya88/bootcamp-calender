@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Update Recording</title>
+	<!-- Compiled and minified CSS -->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+</head>
+<body>
+
+	<nav class="blue accent-2">
+	    <div class="nav-wrapper">
+	        <h4 class="center">Update the recording for the lesson</h4>
+	    </div>
+  	</nav>
+ 
+
+    <div class="container orange-text">
+     
+    <div class="row"></div>
+
+		<!-- form for getting user inputs -->
+		<form id="classForm" action="/classes/recording?_method=PUT" method="POST">
+
+		    <div class="row">
+				
+				<div class="input-field col s8 offset-s2">
+					<label for="lesson">Lesson</label>					
+					<input type="text" name="lesson" id="lesson" class="input-field" required>
+				</div>
+			</div>
+
+			
+			<div class="row">
+				<div class="input-field col s8 offset-s2">
+
+					<label for="instructor1">Instructor1</label>					
+					<input type="text" name="instructor1" id="instructor1" class="input-field">
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="input-field col s8 offset-s2">
+					<label for="instructor2">Instructor2</label>
+					<input type="text" name="instructor2" id="instructor2" class="input-field">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="input-field col s8 offset-s2">
+
+					<label for="recording1">Instructor1's recording</label>					
+					<input type="text" name="recording1" id="recording1" class="input-field">
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="input-field col s8 offset-s2">
+					<label for="recording1">Instructor2's recording</label>
+					<input type="text" name="recording2" id="recording2" class="input-field">
+				</div>
+			</div>
+			
+
+		
+			<!-- Submit Button -->
+			<div class="row center">
+	      	<button id="submit" class="btn waves-effect waves-light  blue accent-2" type="submit" name="action">Submit</button>
+	      	</div>
+ 		</form>
+	  
+	</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+<script>
+
+	function getQueryParams(qs) {
+    		qs = qs.split('+');
+   			 console.log(qs);
+
+    var params = qs.map(function(ele){
+
+		    	var i = ele.indexOf('=');
+
+		    	//var ky = ele.substr(0,(ele.length-i));
+		    	var val = ele.substr(i+1,(ele.length));
+
+		    	return (val);
+    	});
+
+ 	console.log(params);
+    return params;
+
+    }
+
+    
+    //     tokens,
+    //     re = /[?&]?([^=]+)=([^&]*)/g;
+
+    // while (tokens = re.exec(qs)) {
+    //     params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
+    // }
+
+
+	var params = getQueryParams(document.location.search);
+	$('#lesson').val(params[0]);
+	$('#instructor1').val(params[1]);
+	$('#instructor2').val(params[2]);
+	$('#recording1').val(params[3]);
+	$('#recording2').val(params[4]);
+	
+
+
+	//console.log(window.location.search);
+	//console.log(query);
+	//console.log(window.location.href);
+</script>
+</body>
+</html>
