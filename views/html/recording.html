@@ -95,27 +95,14 @@
 
     }
 
-    
-    //     tokens,
-    //     re = /[?&]?([^=]+)=([^&]*)/g;
-
-    // while (tokens = re.exec(qs)) {
-    //     params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
-    // }
-
-
+  
 	var params = getQueryParams(document.location.search);
 	$('#lesson').val(params[0]);
 	$('#instructor1').val(params[1]);
 	$('#instructor2').val(params[2]);
 	$('#recording1').val(params[3]);
 	$('#recording2').val(params[4]);
-	
 
-
-	//console.log(window.location.search);
-	//console.log(query);
-	//console.log(window.location.href);
 </script>
 </body>
 </html>
