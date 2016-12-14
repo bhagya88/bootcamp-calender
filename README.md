@@ -1,7 +1,7 @@
 # Bootcamp Calender
 
 ### Overview
-This is a full stack application developed for The coding Bootcamp at UT Austin. Each cohort runs for about 24 weeks and has about 75 lessons. The lessons are stored in the database which need to be scheduled when a cohort starts and reschdeuled if needed after tne cohort starts. This application provides a drag and drop calender interface to schedule the classes stored in the database. The user also has the option to generate a markdown of the schdeule to be used in the readme.md file on the github repository. 
+This is a full stack application developed for The coding Bootcamp at UT Austin. Each cohort at the this coding camp runs for about 24 weeks and has about 75 lessons. The lessons are stored in the database which need to be scheduled when a cohort starts and reschdeuled if needed after tne cohort starts. This application provides a drag and drop calender interface to schedule the classes stored in the database. The user also has the option to generate a markdown of the schdeule to be used in the readme.md file on the github repository. 
 
 ### Demo
 [Check to see the demo]()
