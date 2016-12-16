@@ -119,9 +119,9 @@ app.use('/node_modules', express.static(__dirname + '/node_modules/'));
 app.get('/calender', ensureAuthenticated, function(req, res){
   
 
- loginUser(req.user.username);
+ //(req.user.username);
 
- models.User.findOne({where:{github_username:req.user.username}
+  models.User.findOne({where:{github_username:req.user.username}
                   })
   .then(function(user){
 
@@ -137,8 +137,9 @@ app.get('/calender', ensureAuthenticated, function(req, res){
 
 
      res.sendFile(path.join(__dirname,'views','html','calender.html'));
+    
 
-    }if(user && (user.role === 'admin')){
+    }else if(user && (user.role === 'admin')){
 
       loginUser({
         name: user.github_username,
@@ -150,14 +151,14 @@ app.get('/calender', ensureAuthenticated, function(req, res){
 
      res.sendFile(path.join(__dirname,'views','html','admin.html'));
 
-    }
-    else{
+
+    }else{
       res.send("Sorry. You are not a authorised user. Please contact Administrator.")
     }
 
     
       
-  });   
+  });
 
 });
 
