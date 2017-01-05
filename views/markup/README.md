@@ -53,13 +53,6 @@ Live Office Hours: 45 minutes before class and 30 minutes after class
 ##### The material covered in this syllabus is subject to change. Our academic team adjusts to the market rapidly.
 | Subject                                                                                     | Lesson # | Date<br>M/W/S             | Date<br>T/T/S             | Recordings               |
 | ------------------------------------------------------------------------------------------- | -------: | ------------------------: | ------------------------: | :----------------------: |
-| Review + Git Branching & Heroku                                                             | 2.1      | Invalid date<br>Invalid date   | Invalid date<br>Invalid date   | [Josh](null)<br>[Gerald](null) |
-| Bootstrap Continued                                                                         | 2.3      | Invalid date<br>Invalid date   | Invalid date<br>Invalid date   | [Josh](null)<br>[Gerald](null) |
-| Objects & Functions                                                                         | 3.3      | Invalid date<br>Invalid date   | Invalid date<br>Invalid date   | [Josh](null)<br>[Gerald](null) |
-| Advanced AJAX                                                                               | 6.2      | Invalid date<br>Invalid date   | Invalid date<br>Invalid date   | [Josh](null)<br>[Gerald](null) |
-| Intro to Project #1 / Project Work                                                          | 8.1      | Invalid date<br>Invalid date   | Invalid date<br>Invalid date   | [Josh](null)<br>[Gerald](null) |
-| Project Work                                                                                | 8.2      | Invalid date<br>Invalid date   | Invalid date<br>Invalid date   | [Josh](null)<br>[Gerald](null) |
-| Project Work                                                                                | 8.3      | Invalid date<br>Invalid date   | Invalid date<br>Invalid date   | [Josh](null)<br>[Gerald](null) |
 | Interview Questions and Project Work-Pt.2                                                   | 9.2      | Invalid date<br>Invalid date   | Invalid date<br>Invalid date   | [Josh](null)<br>[Gerald](null) |
 | Project Presentations #1                                                                    | 9.3      | Invalid date<br>Invalid date   | Invalid date<br>Invalid date   | [Josh](null)<br>[Gerald](null) |
 | Intro to Node.js                                                                            | 10.1     | Invalid date<br>Invalid date   | Invalid date<br>Invalid date   | [Josh](null)<br>[Gerald](null) |
@@ -111,7 +104,11 @@ Live Office Hours: 45 minutes before class and 30 minutes after class
 | Demo Day                                                                                    | 25.2     | Invalid date<br>Invalid date   | Invalid date<br>Invalid date   | [Josh](null)<br>[Gerald](null) |
 | Conclusion                                                                                  | 25.3     | Invalid date<br>Invalid date   | Invalid date<br>Invalid date   | [Josh](null)<br>[Gerald](null) |
 | Kickoff                                                                                     | 1.1      | Mon<br>November 28, 2016       | Mon<br>November 28, 2016       | [Josh](https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a9079a68-2595-483d-b88f-c38578ddaa48)<br>[Gerald](https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=23b59d39-172f-4b61-87be-fe0212638c12) |
+| Bootstrap Continued                                                                         | 2.3      | Mon<br>November 28, 2016       | Mon<br>November 28, 2016       | [Josh](null)<br>[Gerald](null) |
+| Advanced AJAX                                                                               | 6.2      | Mon<br>November 28, 2016       | Mon<br>November 28, 2016       | [Josh](null)<br>[Gerald](null) |
 | JavaScript Scope + jQuery Continued                                                         | 4.2      | Tue<br>November 29, 2016       | Tue<br>November 29, 2016       | [Josh](null)<br>[Gerald](null) |
+| Project Work                                                                                | 8.2      | Tue<br>November 29, 2016       | Tue<br>November 29, 2016       | [Josh](null)<br>[Gerald](null) |
+| Project Work                                                                                | 8.3      | Tue<br>November 29, 2016       | Tue<br>November 29, 2016       | [Josh](null)<br>[Gerald](null) |
 | HTML & CSS Intro                                                                            | 1.2      | Wed<br>November 30, 2016       | Wed<br>November 30, 2016       | [Josh](null)<br>[Gerald](null) |
 | Javascript Review Day                                                                       | 5.1      | Thu<br>December 1, 2016        | Thu<br>December 1, 2016        | [Josh](null)<br>[Gerald](null) |
 | HTML CSS Git                                                                                | 1.3      | Sat<br>December 3, 2016        | Sat<br>December 3, 2016        | [Josh](null)<br>[Gerald](null) |
@@ -125,6 +122,9 @@ Live Office Hours: 45 minutes before class and 30 minutes after class
 | Technical Interview Day #1                                                                  | 5.3      | Mon<br>December 19, 2016       | Mon<br>December 19, 2016       | [Josh](null)<br>[Gerald](null) |
 | Intro to Client-Side Storage                                                                | 7.1      | Mon<br>December 19, 2016       | Mon<br>December 19, 2016       | [Josh](null)<br>[Gerald](null) |
 | Interview Questions and Project Work-Pt.1                                                   | 9.1      | Tue<br>December 20, 2016       | Tue<br>December 20, 2016       | [Josh](null)<br>[Gerald](null) |
+| Objects & Functions                                                                         | 3.3      | Tue<br>January 3, 2017         | Tue<br>January 3, 2017         | [Josh](null)<br>[Gerald](null) |
+| Review + Git Branching & Heroku                                                             | 2.1      | Wed<br>January 4, 2017         | Wed<br>January 4, 2017         | [Josh](null)<br>[Gerald](null) |
+| Intro to Project #1 / Project Work                                                          | 8.1      | Thu<br>January 5, 2017         | Thu<br>January 5, 2017         | [Josh](null)<br>[Gerald](null) |
 | Using Arrays & Objects With jQuery                                                          | 4.3      | Wed<br>January 11, 2017        | Wed<br>January 11, 2017        | [Josh](null)<br>[Gerald](null) |
 | Intro to jQuery                                                                             | 4.1      | Tue<br>January 31, 2017        | Tue<br>January 31, 2017        | [Josh](null)<br>[Gerald](null) |
 | Arrays Loops RPS Breakpoints                                                                | 3.2      | Tue<br>February 28, 2017       | Tue<br>February 28, 2017       | [Josh](null)<br>[Gerald](null) |
