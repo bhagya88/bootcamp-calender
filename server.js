@@ -44,8 +44,8 @@ passport.deserializeUser(function(obj, done) {
 
 if (process.env.NODE_ENV == "production") {
   URL = "https://bc-cal.herokuapp.com";
-  GITHUB_CLIENT_ID = "15db6294f8404ff17d89";
-  GITHUB_CLIENT_SECRET = "7787e86563acb5726194722cbc4e48243d5afedc";
+  GITHUB_CLIENT_ID = "32b88b8ce0cee885748e";
+  GITHUB_CLIENT_SECRET = "c5319f5530fe5e8d0ae85764c3e637918cc2f986";
 } else {
   URL = "http://127.0.0.1:3000";
   GITHUB_CLIENT_ID = "4ec4c231d857c30d7b06";
