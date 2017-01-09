@@ -43,7 +43,7 @@ passport.deserializeUser(function(obj, done) {
 
 
 if (process.env.NODE_ENV == "production") {
-  URL = "https://stark-river-57878.herokuapp.com";
+  URL = "https://bc-cal.herokuapp.com";
   GITHUB_CLIENT_ID = "15db6294f8404ff17d89";
   GITHUB_CLIENT_SECRET = "7787e86563acb5726194722cbc4e48243d5afedc";
 } else {
