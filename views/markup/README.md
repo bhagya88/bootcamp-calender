@@ -53,7 +53,6 @@ Live Office Hours: 45 minutes before class and 30 minutes after class
 ##### The material covered in this syllabus is subject to change. Our academic team adjusts to the market rapidly.
 | Subject                                                                                     | Lesson # | Date<br>M/W/S             | Date<br>T/T/S             | Recordings               |
 | ------------------------------------------------------------------------------------------- | -------: | ------------------------: | ------------------------: | :----------------------: |
-| Interview Questions and Project Work-Pt.2                                                   | 9.2      | Invalid date<br>Invalid date   | Invalid date<br>Invalid date   | [Josh](null)<br>[Gerald](null) |
 | Project Presentations #1                                                                    | 9.3      | Invalid date<br>Invalid date   | Invalid date<br>Invalid date   | [Josh](null)<br>[Gerald](null) |
 | Intro to Node.js                                                                            | 10.1     | Invalid date<br>Invalid date   | Invalid date<br>Invalid date   | [Josh](null)<br>[Gerald](null) |
 | Reading and Writing Files with Node                                                         | 10.2     | Invalid date<br>Invalid date   | Invalid date<br>Invalid date   | [Josh](null)<br>[Gerald](null) |
@@ -125,6 +124,7 @@ Live Office Hours: 45 minutes before class and 30 minutes after class
 | Objects & Functions                                                                         | 3.3      | Tue<br>January 3, 2017         | Tue<br>January 3, 2017         | [Josh](null)<br>[Gerald](null) |
 | Review + Git Branching & Heroku                                                             | 2.1      | Wed<br>January 4, 2017         | Wed<br>January 4, 2017         | [Josh](null)<br>[Gerald](null) |
 | Intro to Project #1 / Project Work                                                          | 8.1      | Thu<br>January 5, 2017         | Thu<br>January 5, 2017         | [Josh](null)<br>[Gerald](null) |
+| Interview Questions and Project Work-Pt.2                                                   | 9.2      | Mon<br>January 9, 2017         | Mon<br>January 9, 2017         | [Josh](null)<br>[Gerald](null) |
 | Using Arrays & Objects With jQuery                                                          | 4.3      | Wed<br>January 11, 2017        | Wed<br>January 11, 2017        | [Josh](null)<br>[Gerald](null) |
 | Intro to jQuery                                                                             | 4.1      | Tue<br>January 31, 2017        | Tue<br>January 31, 2017        | [Josh](null)<br>[Gerald](null) |
 | Arrays Loops RPS Breakpoints                                                                | 3.2      | Tue<br>February 28, 2017       | Tue<br>February 28, 2017       | [Josh](null)<br>[Gerald](null) |
