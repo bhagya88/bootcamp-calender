@@ -125,8 +125,8 @@ app.get('/calender', ensureAuthenticated, function(req, res){
                   })
   .then(function(user){
 
-    // temporarily diabling the role authentication
-    if(user /*&& (user.role === 'instructor' || user.role === 'ta')*/ ){
+    temporarily diabling the role authentication
+    if(user && (user.role === 'instructor' || user.role === 'ta') ){
 
       loginUser({
         name: user.github_username,
