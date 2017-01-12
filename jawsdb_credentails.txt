@@ -1,0 +1,5 @@
+Host: qbct6vwi8q648mrn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com
+Username: qlsn8zqq1x95lkz2
+Password: xanrjbh7i6g36ec7	
+Database: xanrjbh7i6g36ec7
+Port: 3306

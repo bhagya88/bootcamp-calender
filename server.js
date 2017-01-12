@@ -119,46 +119,56 @@ app.use('/node_modules', express.static(__dirname + '/node_modules/'));
 app.get('/calender', ensureAuthenticated, function(req, res){
   
 
- //(req.user.username);
+// disabling authentication from users table to find the cohort_name 
 
-  models.User.findOne({where:{github_username:req.user.username}
-                  })
-  .then(function(user){
+  // models.User.findOne({where:{github_username:req.user.username}
+  //                 })
+  // .then(function(user){
 
-    if(user && (user.role === 'instructor' || user.role === 'ta') ){
+  //   if(user && (user.role === 'instructor' || user.role === 'ta') ){
 
-      loginUser({
-        name: user.github_username,
-        cohort: user.cohort_name,
-        role:user.role
-        });
+  //     loginUser({
+  //       name: user.github_username,
+  //       cohort: user.cohort_name,
+  //       role:user.role
+  //       });
 
-      console.log(loginUser());
+  //     console.log(loginUser());
 
 
-     res.sendFile(path.join(__dirname,'views','html','calender.html'));
+  //    res.sendFile(path.join(__dirname,'views','html','calender.html'));
     
 
-    }else if(user && (user.role === 'admin')){
+  //   }else if(user && (user.role === 'admin')){
 
-      loginUser({
-        name: user.github_username,
-        role:user.role
-        });
+  //     loginUser({
+  //       name: user.github_username,
+  //       role:user.role
+  //       });
 
-      console.log(loginUser());
-
-
-     res.sendFile(path.join(__dirname,'views','html','admin.html'));
+  //     console.log(loginUser());
 
 
-    }else{
-      res.send("Sorry. You are not a authorised user. Please contact Administrator.")
-    }
+  //    res.sendFile(path.join(__dirname,'views','html','admin.html'));
+
+
+  //   }else{
+  //     res.send("Sorry. You are not a authorised user. Please contact Administrator.")
+  //   }
 
     
       
-  });
+  //});
+
+
+  // this code can replaced with the above commented code later
+
+  loginUser({
+        name: user.github_username,
+        cohort: 'UTJAN252017',
+        role:'instructor'
+        });
+  res.sendFile(path.join(__dirname,'views','html','calender.html'));
 
 });
 
