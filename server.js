@@ -164,7 +164,7 @@ app.get('/calender', ensureAuthenticated, function(req, res){
   // this code can replaced with the above commented code later
 
   loginUser({
-        name: user.github_username,
+        name: 'guest',
         cohort: 'UTJAN252017',
         role:'instructor'
         });
